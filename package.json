@@ -1,0 +1,15 @@
+{
+  "name": "rc-loading",
+  "version": "1.0.0",
+  "description": "react loading component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ElonXun",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "rc-animate": "^2.4.4"
+  }
+}
