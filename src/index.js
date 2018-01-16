@@ -46,7 +46,7 @@ class ReactLoading extends Component {
 }
 
 ReactLoading.defaultProps = {
-    spining: true,
+    spinning: true,
     type: 'fence',
     displayType: 'block',
 }
