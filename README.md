@@ -3,10 +3,19 @@
 
 > 本组件 动效 也依赖于 antd 的 [rc-animate](https://motion.ant.design/api/animate) 
 
+> 目前组件支持三种不同的loading样式 详情请见 [CSS实现多种loading](https://github.com/ElonXun/blog/issues/9)
+
 ### 更新
 > 版本1.0.0 更新时间: 2018-01-14 
 ### 安装
 ### 用法
+
+name | type | default      | description
+------- | ---------------- | ---------- | ---------:
+spinning  | Boolean | true | 是否显示spinning
+type  |  String  | 'fence'       |loading的样式
+displayType | String | 'block'  | 内联元素和块元素
+
 ```
 import React, { Component } from 'react';
 import Loading from 'rc-loading';
@@ -23,20 +32,19 @@ class App extends Component {
   render() {
     return (
      <div>
-       <div>
-         <Loading spinning={this.state.spinning}>
-          <div style={{width:300,height:300}}>
-            <p>hello loading</p>
-          </div>
-        </Loading>
-       </div>
-       <button onClick={()=>{
+        <Loading spinning={this.state.spinning} displayType={"inlineBlock"}>
+          <span>hello loading</span>
+       </Loading>
+       <span onClick={()=>{
          this.setState({
            spinning:!this.state.spinning,
          })
-       }}>点击</button>
+       }}>点击</span>
      </div>
     );
   }
 }
+
+export default App;
+
 ```
