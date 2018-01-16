@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.rc-spinning-loading-display{
+    display: inline-block;
+}
+
 .rc-spinning-loading{
     width: 20px;
     display: flex;
@@ -139,8 +143,8 @@
 }
  /* type dynamic-ellipsis css end */
 
-.itemContainer{
-    overflow: hidden;
+.rc-spining-item-container{
+    /* overflow: hidden; */
     opacity: 0.7;
     -webkit-filter: blur(0.5px);
     filter: blur(0.5px);
@@ -148,7 +152,7 @@
     transform: translateZ(0);
 }
 
-.itemContainer::after {
+.rc-spining-item-container::after {
     content: '';
     position: absolute;
     left: 0;
@@ -159,4 +163,9 @@
     opacity: 0.3;
     transition: all .3s;
     z-index: 10;
+
+    /* clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0; */
 }

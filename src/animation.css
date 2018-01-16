@@ -93,8 +93,8 @@
 .fade-enter,
 .fade-leave,
 .fade-appear {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
 }
 
 

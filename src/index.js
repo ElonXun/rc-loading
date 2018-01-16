@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import Animate from 'rc-animate';
 import classNames from 'classnames';
 import './index.css';
@@ -6,14 +6,18 @@ import './animation.css';
 
 
 class ReactLoading extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-    render(){
+    render() {
         const { spinning } = this.props
+        const loadingDisplayType = classNames({
+            "rc-spinning-loading-wrap": true,
+            "rc-spinning-loading-display": this.props.displayType === "inlineBlock",
+        })
         const loadingChange = classNames({
-            "rc-spinning-loading":true,
-            "rc-spinning-fence":this.props.type==="fence",
+            "rc-spinning-loading": true,
+            "rc-spinning-fence": this.props.type === "fence",
             "rc-spinning-ellipsis": this.props.type === "ellipsis",
             "rc-spinning-dynamic-ellipsis": this.props.type === "dynamicEllipsis",
         })
@@ -26,23 +30,25 @@ class ReactLoading extends Component {
                 <span></span>
             </span>
         )
-        return(
-             <Animate component = "div"
-                className={'rc-spinning-loading-wrap'}
-                transitionName = "fade" >
+        return (
+            <Animate component="div"
+                className={loadingDisplayType}
+                transitionName="fade" >
                 {
                     spinning && <div key="loading">{spinIndicator}</div>
                 }
-                <div className={spinning?'itemContainer':''} key="container">
+                <div className={spinning ? 'rc-spining-item-container' : ''} key="container">
                     {this.props.children}
                 </div>
-             </Animate>
+            </Animate>
         );
     }
 }
 
 ReactLoading.defaultProps = {
-    type:'fence',
+    spining: true,
+    type: 'fence',
+    displayType: 'block',
 }
 
 export default ReactLoading;
