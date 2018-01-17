@@ -8,6 +8,10 @@
 ### 更新
 > 版本1.0.0 更新时间: 2018-01-14 
 ### 安装
+```
+ npm install rc-loading --save
+```
+
 ### 用法
 
 name | type | default      | description
@@ -15,6 +19,8 @@ name | type | default      | description
 spinning  | Boolean | true | 是否显示spinning
 type  |  String  | 'fence'       |loading的样式
 displayType | String | 'block'  | 内联元素和块元素
+
+**example**
 
 ```
 import React, { Component } from 'react';
@@ -48,3 +54,5 @@ class App extends Component {
 export default App;
 
 ```
+**效果**
+
