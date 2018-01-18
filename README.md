@@ -58,5 +58,5 @@ export default App;
 ```
 **效果**
 
-![image](https://github.com/ElonXun/rc-loading/blob/master/lib/image/example_display_inlineBlock.gif)
+![image](https://github.com/ElonXun/rc-loading/blob/master/assets/image/example_display_inlineBlock.gif)
 
