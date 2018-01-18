@@ -1,6 +1,6 @@
 {
   "name": "rc-loading",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react loading component",
   "main": "lib/index.js",
   "scripts": {
