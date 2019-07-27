@@ -19,8 +19,8 @@
 name | type | default      | description
 ------- | ---------------- | ---------- | ---------:
 spinning  | Boolean | true | 是否显示spinning
-type  |  String  | 'fence'       |loading的样式
-displayType | String | 'block'  | 内联元素和块元素
+type  |  String  | 'fence'       |loading的样式 其他可选值为 'ellipsis','dynamicEllipsis'
+displayType | String | 'block'  | 内联元素和块元素 其他可选值为 'inlineBlock'
 
 **example**
 
